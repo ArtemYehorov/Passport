@@ -10,7 +10,7 @@ Passport::Passport()
 	SetDateOfBirth("24.08.1991");
 	SetDateOfExpiry("13.12.2025");
 	SetNationality("UKR");
-	SetRecord¹("19910824-00026");
+	SetRecord¹(1991082400026);
 	SetDocument¹("000000001");
 }
 
@@ -23,11 +23,11 @@ Passport::Passport(string surname, string name, string patronymic, string gender
 	SetDateOfBirth(dateOfBirth);
 	SetDateOfExpiry("0");
 	SetNationality("0");
-	SetRecord¹("00000000-00000");
+	SetRecord¹(0000000000000);
 	SetDocument¹("000000000");
 }
 
-Passport::Passport(string surname, string name, string patronymic, string gender, string dateOfBirth, string dateOfExpiry, string nationality, string record¹, string document¹)
+Passport::Passport(string surname, string name, string patronymic, string gender, string dateOfBirth, string dateOfExpiry, string nationality, long long record¹, string document¹)
 {
 	SetSurname(surname);
 	SetName(name);
@@ -70,7 +70,7 @@ void Passport::SetNationality(string nationality)
 {
 	Nationality = nationality;
 }
-void Passport::SetRecord¹(string record¹)
+void Passport::SetRecord¹(long long record¹)
 {
 	Record¹ = record¹;
 }
@@ -109,7 +109,7 @@ string Passport::GetNationality() const
 {
 	return Nationality;
 }
-string Passport::GetRecord¹() const
+long long Passport::GetRecord¹() const
 {
 	return Record¹;
 }

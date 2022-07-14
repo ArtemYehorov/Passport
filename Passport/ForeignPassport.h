@@ -21,15 +21,15 @@ public:
 		SetVisaexpirydate(VE);
 	}
 
-	string GetNameOfCountry()
+	string GetNameOfCountry() const
 	{
 		return NameOfCountry;
 	}
-	string GetVisaissuedate()
+	string GetVisaissuedate() const
 	{
 		return Visaissuedate;
 	}
-	string GetVisaexpirydate()
+	string GetVisaexpirydate() const
 	{
 		return Visaexpirydate;
 	}
@@ -46,32 +46,32 @@ public:
 	{
 		Visaexpirydate = visaexp;
 	}
+
+	friend ostream& operator << (ostream& os, const Visa& original)
+	{
+		os << "\nName of Country - " << original.NameOfCountry << "\n";
+		os << "Visa issue date - " << original.Visaissuedate << "\n";
+		os << "Visa expiry date - " << original.Visaexpirydate << "\n";
+		return os;
+	}
+
 };
 
 class ForeignPassport : public Passport
 {
-	unsigned int Capasity = 0;
-	Visa* Visas = new Visa[Capasity];
+	vector<Visa> Visas;
 
 public:
 	void AddVisa(Visa &a)
 	{
-		if (Capasity == 0)
-		{
-			Visas[Capasity] = a;
-		}
-		else
-		{
-			Visa* Time = new Visa[Capasity + 1];
-			for (int i = 0; i < Capasity; i++)
-			{
-				Time[i] = Visas[i];
-			}
-			Time[Capasity] = a;
-			delete[] Visas;
-			Capasity++;
-			Visas = Time;
-		}
+		Visas.push_back(a);
+	}
+
+	void Print()
+	{
+		Passport::Print();
+		for(int i = 0; i < Visas.size();i++)
+		cout<<Visas[i];
 	}
 
 

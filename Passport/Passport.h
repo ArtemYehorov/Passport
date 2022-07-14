@@ -1,4 +1,6 @@
 #include<iostream>
+#include<vector>
+#include<ctime>
 #include <string>
 using namespace std;
 
@@ -12,7 +14,7 @@ class Passport
 	string DateOfBirth;
 	string DateOfExpiry;
 	string Nationality;
-	string Record¹;
+	long long Record¹;
 	string Document¹;
 
 public:
@@ -21,7 +23,7 @@ public:
 
 	Passport(string surname, string name, string patronymic, string gender, string dateOfBirth);
 
-	Passport(string surname, string name, string patronymic, string gender, string dateOfBirth, string dateOfExpiry, string nationality, string record¹, string document¹);
+	Passport(string surname, string name, string patronymic, string gender, string dateOfBirth, string dateOfExpiry, string nationality, long long record¹, string document¹);
 
 	void SetSurname(string surname);
 	void SetName(string name);
@@ -30,7 +32,7 @@ public:
 	void SetDateOfBirth(string dateOfbirth);
 	void SetDateOfExpiry(string dateOfexpiry);
 	void SetNationality(string nationality);
-	void SetRecord¹(string record¹);
+	void SetRecord¹(long long record¹);
 	void SetDocument¹(string document¹);
 
 	string GetSurname() const;
@@ -40,7 +42,7 @@ public:
 	string GetDateOfBirth() const;
 	string GetDateOfExpiry() const;
 	string GetNationality() const;
-	string GetRecord¹() const;
+	long long GetRecord¹() const;
 	string GetDocument¹() const;
 
 	void Print() const;

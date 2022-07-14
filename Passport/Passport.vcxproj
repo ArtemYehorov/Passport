@@ -139,7 +139,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ForeignPassport.cpp" />
     <ClCompile Include="Passport.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>

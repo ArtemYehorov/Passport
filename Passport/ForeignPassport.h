@@ -3,17 +3,13 @@
 
 class Visa
 {
-private:
+protected:
 	string NameOfCountry;
 	string Visaissuedate;
 	string Visaexpirydate;
 public:
-	Visa()
-	{
-		SetNameOfCountry("USA");
-		SetVisaissuedate("13.07.2022");
-		SetVisaexpirydate("15.05.2023");
-	}
+	Visa() : Visa("USA", "13.07.2022", "15.05.2023") {}
+
 	Visa(string c, string VI, string VE)
 	{
 		SetNameOfCountry(c);
@@ -59,6 +55,7 @@ public:
 
 class ForeignPassport : public Passport
 {
+protected:
 	vector<Visa> Visas;
 
 public:
@@ -70,8 +67,8 @@ public:
 	void Print()
 	{
 		Passport::Print();
-		for(int i = 0; i < Visas.size();i++)
-		cout<<Visas[i];
+		for (int i = 0; i < Visas.size(); i++)
+			cout << Visas[i];
 	}
 
 

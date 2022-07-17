@@ -7,6 +7,7 @@ using namespace std;
 #pragma once
 class Passport
 {
+protected:
 	string Surname;
 	string Name;
 	string Patronymic;

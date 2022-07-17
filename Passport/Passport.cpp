@@ -1,18 +1,7 @@
 #include "Passport.h"
 
 #pragma region Constructors
-Passport::Passport()
-{
-	SetSurname("Tkachenko");
-	SetName("Mariana");
-	SetPatronymic("Ivanivna");
-	SetGender("F");
-	SetDateOfBirth("24.08.1991");
-	SetDateOfExpiry("13.12.2025");
-	SetNationality("UKR");
-	SetRecord¹(1991082400026);
-	SetDocument¹("000000001");
-}
+Passport::Passport() : Passport("Tkachenko", "Mariana", "Ivanivna", "F", "24.08.1991", "13.12.2025", "UKR", 1991082400026, "000000001") {}
 
 Passport::Passport(string surname, string name, string patronymic, string gender, string dateOfBirth)
 {

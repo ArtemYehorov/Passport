@@ -3,18 +3,7 @@
 #pragma region Constructors
 Passport::Passport() : Passport("Tkachenko", "Mariana", "Ivanivna", "F", "24.08.1991", "13.12.2025", "UKR", 1991082400026, "000000001") {}
 
-Passport::Passport(string surname, string name, string patronymic, string gender, string dateOfBirth)
-{
-	SetSurname(surname);
-	SetName(name);
-	SetPatronymic(patronymic);
-	SetGender(gender);
-	SetDateOfBirth(dateOfBirth);
-	SetDateOfExpiry("0");
-	SetNationality("0");
-	SetRecord¹(0000000000000);
-	SetDocument¹("000000000");
-}
+Passport::Passport(string surname, string name, string patronymic, string gender, string dateOfBirth) : Passport(surname, name, patronymic, gender, dateOfBirth, "0", "0", 0000000000000, "000000000") {}
 
 Passport::Passport(string surname, string name, string patronymic, string gender, string dateOfBirth, string dateOfExpiry, string nationality, long long record¹, string document¹)
 {
